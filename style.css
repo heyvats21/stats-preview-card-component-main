@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 93%, 18%);
+
+    --White: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    background-color: var(--dark-desaturated-blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;     /* border radius laane ke liye cards mein image side se nhi arha tah */
+    margin: 2rem; /*agr screen size chota hgoa tab margin ke liye */
+}
+
+.container{
+    max-width: 1020px;
+}
+.text-container{
+    padding: 14%;
+}
+
+.title{
+    color: var(--White);
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.para-text{
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-bottom: 80px;
+    font-size: 14px;
+    line-height:1.6em;
+}
+
+.stat-container{
+    color: hsla(0, 0%, 100%, 0.6);
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-transform: uppercase;
+}
+
+
+.img-container img{
+    display: inherit;  /* image ke niche thora sa black color ko hide krne ke liye */ 
+    width: 100%;        /* image kp chota kre tb wo pura container mein cover ho jaye */ 
+    height: 100%;       /* image kp chota kre tb wo pura container mein cover ho jaye */ 
+    /* object-fit:cover; */
+    
+    
+}
+
+.img-container{
+position: relative;    
+}
+.img-container::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--soft-violet);
+    opacity: 0.5;
+}
+
+
+.num-title{
+    color: hsl(0, 0%, 100%);
+    padding-bottom: 8px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.stat-para{
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
